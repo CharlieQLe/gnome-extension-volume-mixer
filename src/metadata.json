@@ -1,0 +1,8 @@
+{
+  "name": "Volume Mixer",
+  "description": "Set application volume",
+  "uuid": "volume-mixer@charlieqle",
+  "shell-version": [
+    "44"
+  ]
+}
