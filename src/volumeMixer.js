@@ -107,7 +107,7 @@ const VolumeMixerToggle = class extends QuickSettings.QuickToggle {
         this.menu.addMenuItem(this._applicationStreams[id]);
         this.visible = true;
         const count = Object.keys(this._applicationStreams).length;
-        this.title = `Volume Mixer - ${count === 1 ? "1 stream" : `${count} streams`}`;
+        this.subtitle = count === 1 ? "1 stream" : `${count} streams`;
     }
 
     _streamRemoved(_control, id) {
@@ -116,7 +116,7 @@ const VolumeMixerToggle = class extends QuickSettings.QuickToggle {
             delete this._applicationStreams[id];
             const count = Object.keys(this._applicationStreams).length;
             if (count === 0) this.visible = false;
-            else this.title = `Volume Mixer - ${count === 1 ? "1 stream" : `${count} streams`}`;
+            else this.subtitle = count === 1 ? "1 stream" : `${count} streams`;
         }
     }
 }
